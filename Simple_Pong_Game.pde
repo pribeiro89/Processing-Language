@@ -1,4 +1,3 @@
-import ddf.minim.*;
 //--------------------------------------------------------------------
 // Simple Pong Game
 // Has a cat surprise when a player wins a point!
