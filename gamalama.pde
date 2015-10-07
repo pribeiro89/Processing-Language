@@ -1,5 +1,5 @@
 //Instructions:
-//click a few times on the white screen to select a few squares
+//click a few times on the white screen, or click and drag the mouse, to select a few squares
 //then press space and watch :)
 
 int myWidth = 800;
