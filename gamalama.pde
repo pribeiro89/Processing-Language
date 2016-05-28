@@ -1,12 +1,13 @@
-//Instructions:
-//click a few times on the white screen, or click and drag the mouse, to select a few squares
-//then press space and watch :)
+/*
+ * Instructions:
+ * Click a few times on the white screen, or click and drag the mouse, to select a few squares;
+ * Then press space and watch. :)
+ */
 
 int myWidth = 800;
 int myHeight = 600;
 int nFrames = 0;
 int frames_per = 4;
-
 
 color red = color(255, 0, 0);
 color white = color(255);
@@ -19,8 +20,7 @@ int cols = 50;
 int dia = 1;
 boolean stopped;
 
-void setup()
-{
+void setup() {
   size(myWidth, myHeight);
   m = new int[rows][cols];
   for(int i = 0; i < rows; i++)
@@ -29,8 +29,7 @@ void setup()
   stopped = false;
 }
 
-void draw()
-{
+void draw() {
   background(white);
   if(stopped == true)
     update();
@@ -38,8 +37,7 @@ void draw()
   nFrames++;
 }
 
-void mouseClicked()
-{
+void mouseClicked() {
   int w = width / cols;
   int h = height / rows;
   int mx = mouseX / w;
@@ -48,8 +46,7 @@ void mouseClicked()
   white_color = 0;
 }
 
-void mouseDragged()
-{
+void mouseDragged() {
   int w = width / cols;
   int h = height / rows;
   int mx = mouseX / w;
@@ -58,19 +55,17 @@ void mouseDragged()
   white_color = 0;
 }
 
-void keyPressed(){
+void keyPressed() {
   if(key == ' ')
     stopped = !stopped;
 }
 
-void update()
-{
+void update() {
   if(nFrames%(60/frames_per) == 0)
     construct_nuvem(m, rows, cols, dia++);
 }
 
-void drawMatrix(int m[][], int r, int c)
-{
+void drawMatrix(int m[][], int r, int c) {
   rectMode(CENTER);
   textAlign(CENTER, CENTER);
   int w = width / c;
@@ -92,10 +87,9 @@ void drawMatrix(int m[][], int r, int c)
       }
 }
 
-int construct_nuvem(int m[][], int rows, int columns, int dia){
+int construct_nuvem(int m[][], int rows, int columns, int dia) {
   int u = 0;//variavel de controlo, se nao entrar em nenhum dos if ali de baixo quer dizer que nao alterou nenhum bloco
-  for (int i = 0; i < rows; ++i)
-  {
+  for (int i = 0; i < rows; ++i) {
     for (int j = 0; j < columns; ++j)
     {
       if (m[i][j] == dia-1 && j+1< columns && m[i][j+1] == -1){
@@ -130,4 +124,3 @@ void construct_nuvem_dias(int m[][], int rows, int columns){
   }
 }
 */
-
